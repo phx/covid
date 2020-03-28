@@ -1,3 +1,6 @@
+![Platform: Linux/MacOS](https://img.shields.io/badge/platform-Linux/MacOS-blue)
+![Follow @rubynorails on Twitter](https://img.shields.io/twitter/follow/rubynorails?label=follow&style=social)
+
 # covid.sh
 
 There are much more robust COVID-19 trackers out there, but I whipped up this simple one for myself so that I could pull up-to-date stats from a known reliable resource,
