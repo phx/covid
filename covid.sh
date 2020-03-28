@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Use your particular state number in alphabetical order
 # This example uses Alabama (1)
