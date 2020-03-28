@@ -1,7 +1,8 @@
 # covid.sh
 
 There are much more robust COVID-19 trackers out there, but I whipped up this simple one for myself so that I could pull up-to-date stats from a known reliable resource,
-[https://covidtracking.com/api/](https://covidtracking.com/api/).
+[https://covidtracking.com/api/](https://covidtracking.com/api/).  For stats by country, you are probably going to want to use something more like
+[coronavirus-tracker-cli](https://github.com/sagarkarira/coronavirus-tracker-cli), which you can simply use by executing `curl -L corona-stats.online`.
 
 I figured I would share in case anyone was interested for their own use, but I mainly just created this for me and my family.
 
