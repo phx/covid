@@ -49,5 +49,5 @@ If you run it in the background, you should probably be able to kill it with `pk
 
 Otherwise, just use the ol' trusty one-liner:
 
-`ps aux | grep [c]ovid.sh | awk '{print $2}' | xargs kill -9`
+`ps aux | grep [/]covid.sh | awk '{print $2}' | xargs kill -9`
  
