@@ -5,6 +5,11 @@ There are much more robust COVID-19 trackers out there, but I whipped up this si
 
 I figured I would share in case anyone was interested for their own use, but I mainly just created this for me and my family.
 
+**Dependencies:**
+- `bash`
+- `jq`
+- `column`
+
 ## Example Ouput
 
 ```
