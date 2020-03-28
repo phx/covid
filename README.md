@@ -7,6 +7,7 @@ I figured I would share in case anyone was interested for their own use, but I m
 
 **Dependencies:**
 - `bash`
+- `curl`
 - `jq`
 - `column`
 
