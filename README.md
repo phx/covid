@@ -5,6 +5,21 @@ There are much more robust COVID-19 trackers out there, but I whipped up this si
 
 I figured I would share in case anyone was interested for their own use, but I mainly just created this for me and my family.
 
+## Example Ouput
+
+```
+STATE:     AL
+POSITIVE:  644
+DEATHS:    3
+Fri Mar 27 23:00:00 CDT 2020
+
+COUNTRY:       US
+POSITIVE:      102143
+HOSPITALIZED:  14069
+DEATHS:        1603
+Sat Mar 28 11:47:54 CDT 2020
+```
+
 ## Usage
 
 `./covid.sh [output file]`
