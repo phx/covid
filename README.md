@@ -1,6 +1,6 @@
 # covid.sh
 
-There are much more robust covid-19 trackers out there, but I whipped up this simple one for myself so that I could pull up-to-date stats from a known reliable resource,
+There are much more robust COVID-19 trackers out there, but I whipped up this simple one for myself so that I could pull up-to-date stats from a known reliable resource,
 [https://covidtracking.com/api/](https://covidtracking.com/api/).
 
 I figured I would share in case anyone was interested for their own use, but I mainly just created this for me and my family.
