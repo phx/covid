@@ -55,7 +55,7 @@ while :; do
 
   clear
   echo -e '<!DOCTYPE html>\n<html>\n<head>\n<meta http-equiv="refresh" content="300" />\n</head>\n<body>\n<pre>' > "$OUTPUT_FILE"
-  print_data | tee -a "$OUTPUT_FILE"
+  print_data | tee -a "$OUTPUT_FILE" 2>&1
   echo -e '</pre>\n</body>\n</html>' >> "$OUTPUT_FILE"
-  read -t 3600 -n 3600 && break
+  read -t 300 -n 300 && break
 done
