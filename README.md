@@ -36,7 +36,7 @@ Sat Mar 28 11:47:54 CDT 2020
 
 You can change the state number in the script to reflect the number of your state from the [covidtracking.com API](https://covidtracking.com/api/).
 
-The script runs in an infinite loop, pulling API data every hour.  It can be killed with Ctrl-C.
+The script runs in an infinite loop, pulling API data every 5 minutes.  It can be killed with Ctrl-C.
 
 If you specify an output file, it will write the results to that file in HTML format.  I did this so I could host it at an Nginx document root on my local network.
 
