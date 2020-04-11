@@ -6,6 +6,13 @@
 
 STATE_NUMBER=1
 
+# Regular options:
+if [[ -z $1 ]]; then
+  OUTPUT_FILE=/dev/null
+else
+  OUTPUT_FILE="$1"
+fi
+
 # Kill options:
 if [[ ($1 = '-k') || ($1 = '--kill') ]]; then
   echo 'Processes:'
@@ -39,13 +46,6 @@ if [[ $1 = '--daemonized' ]]; then
   else
     OUTPUT_FILE="$2"
   fi
-fi
-
-# Regular options:
-if [[ -z $1 ]]; then
-  OUTPUT_FILE=/dev/null
-else
-  OUTPUT_FILE="$1"
 fi
 
 get_data() {
