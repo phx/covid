@@ -42,17 +42,12 @@ If you specify an output file, it will write the results to that file in HTML fo
 
 There is a meta tag in the HTML that will refresh the page every 5 minutes.  You don't have to host the file -- you can just as easily open it in Chrome, and it will work the same way.
 
-## Running in the background
+## Running in the background as a daemon
 
 If you only want to monitor the web page without having a terminal window dedicated to process itself, you can just run it in the background:
 
-`(./covid.sh /path/to/file.html &) > /dev/null 2>&1`
+`./covid.sh -d /path/to/file.html`
 
 And then just open `file.html` in your browser, and monitor from there.
 
-If you run it in the background, you should probably be able to kill it with `pkill covid.sh`.
-
-Otherwise, just use the ol' trusty one-liner:
-
-`ps aux | grep [/]covid.sh | awk '{print $2}' | xargs kill -9`
- 
+You can kill the process with `./covid.sh --kill`. 

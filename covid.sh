@@ -6,6 +6,42 @@
 
 STATE_NUMBER=1
 
+# Kill options:
+if [[ ($1 = '-k') || ($1 = '--kill') ]]; then
+  echo 'Processes:'
+  ps -o ppid= --ppid $(cat "covid.pid")
+  echo -e '\nKilling...'
+  kill $(cat "covid.pid")
+  if [[ $? -ne 0 ]]; then
+    echo 'Processes not killed.  Please kill manually.'
+    ps -o ppid= --ppid $(cat "covid.pid")
+  else
+    echo 'Processes killed successfully.'
+  fi
+  exit
+fi
+
+# Daemon options:
+if [[ ($1 = '-d') || ($1 = '--daemon') ]]; then
+  DAEMON=1
+  if [[ -z $2 ]]; then
+    OUTPUT_FILE=/dev/null
+  else
+    OUTPUT_FILE="$2"
+  fi
+fi
+if [[ $1 = '--daemonized' ]]; then
+  DAEMONIZED=1
+  PID=$$
+  echo "$PID" > covid.pid
+  if [[ -z $2 ]]; then
+    OUTPUT_FILE=/dev/null
+  else
+    OUTPUT_FILE="$2"
+  fi
+fi
+
+# Regular options:
 if [[ -z $1 ]]; then
   OUTPUT_FILE=/dev/null
 else
@@ -38,6 +74,13 @@ print_data() {
   echo "$us_timestamp"
   echo
 }
+
+if [[ $DAEMON -eq 1 ]]; then
+  echo 'Launching as daemon...'
+  ($0 --daemonized ${@:2} &) >/dev/null 2>&1
+  echo "Kill with $0 --kill"
+  exit
+fi
 
 while :; do
   state_data="$(curl -skL 'https://covidtracking.com/api/states')"
